@@ -14,7 +14,7 @@
 		<style>
 			.outer_div{ display: table; position: absolute; height: 100%; width: 100%;}
 			.middle_div{display: table-cell; vertical-align: middle; background:#eee;}
-			.inner_div{margin-left: auto; margin-right: auto; max-width:600px; width:100%; background:#fff;}
+			.inner_div{margin-left: auto; margin-right: auto; max-width:600px; width:100%; padding:35px}
 			<!-- @media only screen and (min-width: 76px) {
 			.middle_div{background:#fff;}
 			} -->
@@ -22,75 +22,53 @@
 	</head>
 	
 	<body>
-	<div class="modal">
-			  <div class="modal-dialog" role="document">
-				<div class="modal-content">
-				  <div class="modal-header">
-					<h5 class="modal-title">Modal title</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					  <span aria-hidden="true">&times;</span>
-					</button>
-				  </div>
-				  <div class="modal-body">
-					<p>Modal body text goes here.</p>
-				  </div>
-				  <div class="modal-footer">
-					<button type="button" class="btn btn-primary">Save changes</button>
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				  </div>
+
+
+		<div class="modal fade" id="forgotPassModal" tabindex="-1" role="dialog" aria-labelledby="ForgotPassLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="ForgotPass">ForgotPassword?</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				<div class="form">
+					<input type="text" style="width:100%" placeholder="Enter registered email or phone"/>
 				</div>
 			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			  </div>
 			</div>
-			
-	<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#forgotPassModal">
-  Launch demo modal
-</button>
+		  </div>
+		</div>
 
-<!-- Modal -->
-<div class="modal fade" id="forgotPassModal" tabindex="-1" role="dialog" aria-labelledby="ForgotPassLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="ForgotPass">ForgotPassword?</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-		<div class="form">
-			<input type="text" placeholder="Enter registered email or phone"/>
-		</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-	<div class="outer_div"> <!-- Problem 1 -->	
-		<div class="middle_div">
-			<div class="inner_div">
-				<form  class="Form_width">
-					<div class="page-header"> <h1>Intellect Corporations</h1> </div>
-					<div class="form-group">
-						<label for="emailLabel"><strong>Email ID</strong></label>
-						<input type="email" class="form-control" id="emailID" placeholder="abc@dell.com" onclick="displayMessage()" autofocus/>
-					</div>
-					<div class="form-group">
-						<label for="passwordLabel"><strong>Password</strong></label>
-						<input type="password" class="form-control" id="pass" placeholder="password" onclick="displayMessage()"/>
-					</div>
-					<div class="form-group">
-						<button type="submit" class="btn btn-primary">Login</button>
-						<a href="signup.html" role="button" class="btn btn-primary">Sign Up </a>
-						<button  class="btn btn-primary">Forgot Password?</button>
-					</div>
-				</form>
+		<div class="outer_div"> <!-- Problem 1 -->	
+			<div class="middle_div">
+				<div class="inner_div" style="background:#2c3e50">
+					<form  class="Form_width">
+						<div class="page-header"> <h1 style="color:white">Intellect Corporations</h1> </div>
+						<div class="form-group">
+							<label for="emailLabel" style="color:white"><strong>Email ID</strong></label>
+							<input type="email" class="form-control" id="emailID" placeholder="abc@dell.com" onclick="displayMessage()" autofocus/>
+						</div>
+						<div class="form-group">
+							<label for="passwordLabel" style="color:white"><strong>Password</strong></label>
+							<input type="password" class="form-control" id="pass" placeholder="password" onclick="displayMessage()"/>
+						</div>
+						<br>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary">Login</button>
+							<a href="signup.html" role="button" class="btn btn-primary">Sign Up </a>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#forgotPassModal">Forgot Password?</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
-	</div>
 	
 	</body>
 	

@@ -9,6 +9,9 @@
 		<title>Bootstrap Basic Template</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"/></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script>
+			
+		</script>
 		<style>
 			.outer_div{display: table; position: absolute; height: 100%; width: 100%;}
 			.middle_div{display: table-cell; vertical-align: middle;}
@@ -17,7 +20,7 @@
 	</head>
 	<body>
 		<div class="outer_div">
-			<div class="middle_div">
+			<div class="middle_div" style="background:#abb">
 				<div class="inner_div" style="background:#2c3e50">
 						<div class="page-header"> <h1 style="color:white">Intellect Corporations</h1> </div>
 						<form>
@@ -44,7 +47,8 @@
 							</div>
 							<br>
 							<div class="form-group">
-							<button type="submit" class="btn btn-primary">SignUp</button>
+							<a href="login.html" class="btn btn-primary">Back</a>
+							<button type="submit" class="btn btn-primary" onClick="validate()">SignUp</button>
 							</div>
 						</form>
 				</div>

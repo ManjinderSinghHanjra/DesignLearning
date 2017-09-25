@@ -6,22 +6,40 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>Bootstrap Basic Template</title>
+		<title>Intellect Corporation</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script>
 		$(document).ready(function(){
 			$("#signIn").click(function(){
-				var pass = "admin@gmail.com";
-				var user = "admin";
-				if(pass === $("#emailID").val())
+				var user = "admin@gmail.com";
+				var pass = "admin";
+				var user_length = $("#emailID").val().length;
+				var pass_length = $("#pass").val().length;
+				//if(user_length<1 && pass_length<1)
+				if($("#emailID").val()=='' && $("#pass").val()=='')
 				{
-					alert("Sign In Successful! Will be camouflaging you by showing redirection...");
+					alert("You haven't entered your email-id & password!");
 				}
 				else
-				{
-					alert("Wrong Username/Password!");
-				}
+					if($("#emailID").val()=='')
+					{
+						alert("You haven't entered your email-id");
+					}
+					else
+					if($("#pass").val() == '')
+					{
+						alert("You haven't entered password!");
+					}
+					else
+					if(user === $("#emailID").val() && pass === $("#pass").val())
+					{
+						alert("Sign In Successful! Will be camouflaging you by showing redirection...");
+					}
+					else
+					{
+						alert("Wrong Username/Password!");
+					}
 			});
 		});
 		</script>
@@ -67,7 +85,10 @@
 						<div class="page-header"> <h1 style="color:white">Intellect Corporations</h1> </div>
 						<div class="form-group">
 							<label for="emailLabel" style="color:white"><strong>Email ID</strong></label>
-							<input type="email" class="form-control" id="emailID" placeholder="abc@dell.com" autofocus/>
+							
+							<input type="email" class="form-control" id="emailID" placeholder="abc@dell.com" autofocus>
+								<span class="glyphicon glyphicon-envelope"></span>
+							</input>
 						</div>
 						<div class="form-group">
 							<label for="passwordLabel" style="color:white"><strong>Password</strong></label>

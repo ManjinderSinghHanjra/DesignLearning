@@ -1,0 +1,91 @@
+<!-- Task: How to put arbitrary space between HTML elements, like two buttons? -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Bootstrap Basic Template</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"/></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			.outer_div{ display: table; position: absolute; height: 100%; width: 100%;}
+			.middle_div{display: table-cell; vertical-align: middle; background:#eee;}
+			.inner_div{margin-left: auto; margin-right: auto; max-width:600px; width:100%; background:#fff;}
+			<!-- @media only screen and (min-width: 76px) {
+			.middle_div{background:#fff;}
+			} -->
+		</style>
+	</head>
+	
+	<body>
+	<div class="outer_div"> <!-- Problem 1 -->	
+		<div class="middle_div">
+			<div class="inner_div">
+				<form  class="Form_width">
+					<div class="page-header"> <h1>Intellect Corporations</h1> </div>
+					<div class="form-group">
+						<label for="emailLabel"><strong>Email ID</strong></label>
+						<input type="email" class="form-control" id="emailID" placeholder="abc@dell.com" onclick="displayMessage()" autofocus/>
+					</div>
+					<div class="form-group">
+						<label for="passwordLabel"><strong>Password</strong></label>
+						<input type="password" class="form-control" id="pass" placeholder="password" onclick="displayMessage()"/>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary">Login</button>
+						<a href="signup.html" role="button" class="btn btn-primary">Sign Up </a>
+						<button  class="btn btn-primary">Forgot Password?</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	</body>
+	
+</html>
+
+
+
+<!--
+<!DOCTYPE html>
+	<html>
+		<head>
+		<link rel="stylesheet" type="text/css" href="loginForm.css">
+			<script>
+				//security concerns with storing something locally inside the code itself
+				var username="admin";
+				var password="admin";
+			function display_message(){
+				if(username == document.getElementById("loginID").value && 
+				   password == document.getElementById("password").value )
+				{
+					document.write("SignIn Successful. You'll be redirected to the website in a while.");
+				}
+				else
+				{
+					window.alert("Wrong credentials!");
+				}
+			}
+			function display_signup(){
+				document.write("Sign Up page is about to load...");	
+			}
+			</script>
+		</head>
+		<body>
+			<div class="login_banner" style="position:absolute; left:550px; top:250px">
+			<h4> Enter Login Credentials </h4>
+			<form name="Login Form">
+				<pre>Username : <input type="text" class="loginIDFields" autofocus></pre>
+				<pre>Password : <input type="text" class="loginIDFields" id="password"></pre>
+				<input type="submit" value="Login" id="loginIDButton1" onClick="display_message()">
+				<input type="submit" value="Forgot Password?" id="loginIDButton2" onClick="display_signup()">
+			</form>
+			</div>
+		</body>
+	</html> 
+	-->

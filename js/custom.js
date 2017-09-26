@@ -1,4 +1,31 @@
-function specialCharsPresent(username, pass)
+$.validator.addMethod("customValidation", 
+		function(username, element) {return /^[A-Za-z\d\@\_]+$/.test(value);},
+		"Sorry, no special character is allowed except A-Za-z@_");
+
+
+$document.ready( function(){
+	$("#login_form").validate(
+				rules:{
+						email: {
+									required: true;
+									minLength: 3;
+									maxLength: 10;
+									customValidation: true;
+						}
+				},
+				message:{
+						email: {
+									required: "email can't be empty";
+									minLength: "At least 3 password characters.";
+									maxLength: "At most 10 password characters."; 
+						}
+				}
+	);
+});
+
+
+
+/*function specialCharsPresent(username, pass)
 		{
 			var regex = new RegExp("^[a-zA-Z0-9_\@\.]+$");
 			if (!regex.test(username))
@@ -14,9 +41,6 @@ function specialCharsPresent(username, pass)
 				var pass = "admin";
 				var username = $("#emailID").val();
 				var password = $("#pass").val();
-	//			var user_length = $("#emailID").val().length;
-	//			var pass_length = $("#pass").val().length;
-				//if(user_length<1 && pass_length<1)
 				if(username==='' && password==='')
 				{
 					alert("You haven't entered your email-id & password!");
@@ -47,4 +71,4 @@ function specialCharsPresent(username, pass)
 						alert("Wrong Username/Password!");
 					}
 			});
-		});
+		});*/

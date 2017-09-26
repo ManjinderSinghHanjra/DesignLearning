@@ -9,7 +9,8 @@
 		<title>Intellect Corporation</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/custom.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+		<!--<script type="text/javascript" src="js/custom.js"></script>-->
 		<style>
 			.outer_div{ display: table; position: absolute; height: 100%; width: 100%;}
 			.middle_div{display: table-cell; vertical-align: middle; background:#eee;}
@@ -48,22 +49,22 @@
 		<div class="outer_div" > <!-- Problem 1 -->	
 			<div class="middle_div" style="background:#abb">
 				<div class="inner_div" style="background:#2c3e50">
-					<form  class="Form_width">
+					<form id="loginForm" class="Form_width">
 						<div class="page-header"> <h1 style="color:white">Intellect Corporations</h1> </div>
-						<div class="form-group">
+						<div id="login_form" class="form-group">
 							<label for="emailLabel" style="color:white"><strong>Email ID</strong></label>
 							<div class="input-group">
-							<input type="email" class="form-control" id="emailID" placeholder="abc" autofocus></input> 
+							<input name="email" type="email" class="form-control" placeholder="abc" autofocus></input> 
 							<span class="input-group-addon">@intellect.org</span>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="passwordLabel" style="color:white"><strong>Password</strong></label>
-							<input type="password" class="form-control" id="pass" placeholder="password" onclick="displayMessage()"/>
+							<input name="password" type="password" class="form-control" placeholder="password"/>
 						</div>
 						<br>
 						<div class="form-group">
-							<button type="submit" id="signIn" class="btn btn-primary">Login</button>
+							<button id="signIn" type="submit" class="btn btn-primary">Login</button>
 							<a href="signup.html" role="button" class="btn btn-primary">Sign Up </a>
 								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#forgotPassModal">Forgot Password?</button>
 						</div>

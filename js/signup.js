@@ -1,5 +1,6 @@
 function specialCharsPresent(name, email, password)
 {
+	alert("hello");
 	var regex = new RegExp("^[a-zA-Z]+$");
 	if(!regex.test(name) || !regex.test(email))
 	{
@@ -22,9 +23,10 @@ function empty(str)
 
 $(document).ready( function(){
 	$("#signup").click( function(){
-		var email = $("#email").value();
-		var pass  =  $("#password").value();
-		var name = $("#firstName").value() + $("#secondName").value();
+		var email = $("#email").val();
+		var pass  =  $("#password").val();
+		var name = $("#firstName").val() + $("#secondName").val();
+		
 		if(empty(name) || empty(email) || empty(pass))
 		{
 			alert("Fields can't be empty!");
@@ -32,7 +34,7 @@ $(document).ready( function(){
 		else
 		if(specialCharsPresent(name, pass, email))
 		{
-			alert("Allowed characters are as follows:\n " + 
+			alert("Allowed set of characters are as follows:\n" + 
 				  "Name:      a-zA-Z \n" +
 				  "email:     a-zA-Z@. \n" +
 				  "password:  a-zA-Z@.");

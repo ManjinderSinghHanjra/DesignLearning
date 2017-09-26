@@ -1,6 +1,6 @@
 function specialCharsPresent(username, pass)
 		{
-			var regex = new RegExp("^[a-zA-Z0-9_\@\.]+$ + [^ ]*");
+			var regex = new RegExp("^[a-zA-Z0-9_\@\.]+$");
 			if (!regex.test(username))
 			{
 				return true;
@@ -10,7 +10,7 @@ function specialCharsPresent(username, pass)
 		
 		$(document).ready(function(){
 			$("#signIn").click(function(){
-				var user = "admin@gmail.com";
+				var user = "admin";
 				var pass = "admin";
 				var username = $("#emailID").val();
 				var password = $("#pass").val();
@@ -40,7 +40,7 @@ function specialCharsPresent(username, pass)
 					if(user === $("#emailID").val() && pass === $("#pass").val())
 					{
 						alert("Sign In Successful! Will be camouflaging you by showing redirection...");
-						//window.location.href = "home.html";
+						window.location.href = "home.html";
 					}
 					else
 					{

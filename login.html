@@ -9,41 +9,7 @@
 		<title>Intellect Corporation</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script>
-		$(document).ready(function(){
-			$("#signIn").click(function(){
-				var user = "admin@gmail.com";
-				var pass = "admin";
-				var user_length = $("#emailID").val().length;
-				var pass_length = $("#pass").val().length;
-				//if(user_length<1 && pass_length<1)
-				if($("#emailID").val()=='' && $("#pass").val()=='')
-				{
-					alert("You haven't entered your email-id & password!");
-				}
-				else
-					if($("#emailID").val()=='')
-					{
-						alert("You haven't entered your email-id");
-					}
-					else
-					if($("#pass").val() == '')
-					{
-						alert("You haven't entered password!");
-					}
-					else
-					if(user === $("#emailID").val() && pass === $("#pass").val())
-					{
-						alert("Sign In Successful! Will be camouflaging you by showing redirection...");
-						//window.location.href = "home.html";
-					}
-					else
-					{
-						alert("Wrong Username/Password!");
-					}
-			});
-		});
-		</script>
+		<script type="text/javascript" src="js/custom.js"></script>
 		<style>
 			.outer_div{ display: table; position: absolute; height: 100%; width: 100%;}
 			.middle_div{display: table-cell; vertical-align: middle; background:#eee;}
@@ -86,10 +52,10 @@
 						<div class="page-header"> <h1 style="color:white">Intellect Corporations</h1> </div>
 						<div class="form-group">
 							<label for="emailLabel" style="color:white"><strong>Email ID</strong></label>
-							
-							<input type="email" class="form-control" id="emailID" placeholder="abc@dell.com" autofocus>
-								<span class="glyphicon glyphicon-envelope"></span>
-							</input>
+							<div class="input-group">
+							<input type="email" class="form-control" id="emailID" placeholder="abc" autofocus></input> 
+							<span class="input-group-addon">@intellect.org</span>
+							</div>
 						</div>
 						<div class="form-group">
 							<label for="passwordLabel" style="color:white"><strong>Password</strong></label>

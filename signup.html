@@ -9,14 +9,8 @@
 		<title>Bootstrap Basic Template</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"/></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script>
-			
-		</script>
-		<style>
-			.outer_div{display: table; position: absolute; height: 100%; width: 100%;}
-			.middle_div{display: table-cell; vertical-align: middle;}
-			.inner_div{margin-left: auto; margin-right: auto; max-width:500px; width:100%; padding:35px}
-		</style>
+		<script src="js/signup.js"></script>
+		<link rel="stylesheet" href="css/signup.css">
 	</head>
 	<body>
 		<div class="outer_div">
@@ -25,30 +19,30 @@
 						<div class="page-header"> <h1 style="color:white">Intellect Corporations</h1> </div>
 						<form>
 							<div class="form-group">
-								<label for="name" style="color:white"><strong>Name</strong></label>
-								<input type="text" class="form-control" placeholder="First Name"/>
+								<label style="color:white"><strong>Name</strong></label>
+								<input id="firstName" type="text" class="form-control" placeholder="First Name"/>
 								<br>
-								<input type="text" class="form-control" placeholder="Last Name"/>
+								<input id="lastName" type="text" class="form-control" placeholder="Last Name"/>
 							</div>
 							<div class="form-group">
-								<label for="email" style="color:white"><strong>EmailID</strong></label>
+								<label style="color:white"><strong>EmailID</strong></label>
 								<div class="input-group">
-								<input type="text" class="form-control" placeholder="emailID"/>
-								<span class="input-group-addon" id="basic">@dell.com</span>
+								<input id="email" type="text" class="form-control" placeholder="emailID"/>
+								<span class="input-group-addon">@intellect.org</span>
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="password" style="color:white"><strong>Password</strong></label>
-								<input type="password" class="form-control" placeholder="password"/>
+								<label style="color:white"><strong>Password</strong></label>
+								<input id="password"  type="password" class="form-control" placeholder="password"/>
 							</div>
 							<div class="form-group">
-								<label for="password" style="color:white"><strong>Confirm Password</strong></label>
-								<input type="password" class="form-control" placeholder="password"/>
+								<label style="color:white"><strong>Confirm Password</strong></label>
+								<input id="rePassword" type="password" class="form-control" placeholder="password"/>
 							</div>
 							<br>
 							<div class="form-group">
 							<a href="login.html" class="btn btn-primary">Back</a>
-							<button type="submit" class="btn btn-primary" onClick="validate()">SignUp</button>
+							<button id="signup" type="submit" class="btn btn-primary">SignUp</button>
 							</div>
 						</form>
 				</div>

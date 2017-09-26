@@ -55,12 +55,6 @@
 				}
 			}
 			
-			@media (max-width:720px){
-				.ScienceCarousel{
-					max-width:90%
-				}
-			}
-			
 			.carousel-indicators li {
 				margin: 10px;
 				text-indent: 0;
@@ -80,7 +74,15 @@
 	</head>
 	<body>
 		<nav class="navbar navbar-inverse" style="margin-bottom:0px">		  
-		  <div class="container">
+		  <div class="container" 
+				style="margin-left: 0px;
+				margin-right: 0px;
+				padding-left: 0px;
+				padding-right: 0px;
+				left: 9px;
+				bottom: 0px;
+				margin-top: 0px;
+				right: 0px;">
 			
 			<div class="navbar-header">
 			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
@@ -104,7 +106,7 @@
 				<li>
 					<form class="form-inline" style="padding-top:5px">
 						<div class="form-group has-feedback">
-							<input type="text" class="form-control" placeholder="Username" />
+							<input type="text" class="form-control" placeholder="search" />
 							<i class="glyphicon glyphicon-search form-control-feedback"></i>
 						</div>
 					</form>
@@ -120,7 +122,7 @@
 			
 		 </div>
 		</nav>
-		<div class="carousel slide container-fluid" data-ride="carousel" data-interval="4000">
+		<div class="carousel slide container-fluid" data-ride="carousel" data-interval="4000" style="padding-left: 0px; padding-right: 0px;">
 		  <ol class="carousel-indicators">
 			<li  data-slide-to="0" class="active"></li>
 			<li  data-slide-to="1"></li>
@@ -163,26 +165,30 @@
 		  </a>
 		</div>
 		
-		<div class="container-fluid bg-2 text-center">
+		<div class="container-fluid bg-2 text-center" 
+    style="padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 15px;"
+>
 		  <h3><strong>World's only OpenS Quantum Research Laboratory</strong></h3>
 		  <p>See all the research and every nitty-gritties of our research facility. It's all free and open.</p>
 		  <a href="#" class="btn btn-default btn-lg">Visit</a>
 		</div>
 
-		<div class="container-fluid bg-3 text-center"> 
-		  <h3>Why us?</h3>
+		<div class="container-fluid bg-3 text-center" style="padding-top: 35px;"> 
+		  <h3>Why us?</h3><br>
 		  <div class="row">
-			<div class="col-sm-4" style="height:200px;">
+			<div class="col-sm-4" style="height:100px;">
 			  <p>Pay for what you need only.</p><br>
 			  <button class="btn btn-primary">Know More</button>
 			  <!--<img class="image-responsive" src="payAsYouGo.png" alt="Image" style="width:100%; height:100%; align:middle">-->
 			</div>
-			<div class="col-sm-4" style="height:200px;">
+			<div class="col-sm-4" style="height:100px;">
 			  <p>Relieve maintenance charges & headache. It's all done by us for free.</p>
 			  <button class="btn btn-primary">Know More</button>
 			  <!--<img class="image-responsive" src="maintenance.png" alt="Image" style="width:100%; height:100%; align:middle">-->
 			</div>
-			<div class="col-sm-4" style="height:200px;"> 
+			<div class="col-sm-4" style="height:100px;"> 
 			  <p>We don't share your data unless you license it for CreativeCommons</p>
 			  <button class="btn btn-primary">Know More</button>
 			  <!--<img class="image-responsive" src="dataAccess.png" alt="Image" style="width:100%; height:100%; align:middle">-->
@@ -190,8 +196,8 @@
 		  </div>
 		</div>
 		
-		<div class="faqs text-center">
-			<h3>Explore our research centers in India</h3>
+		<div class="container-fluid faqs text-center" style="margin-top: 25px;padding-bottom: 0px;border-bottom-width: 30px;margin-bottom: 29px;">
+			<h3>Explore our research centers in India</h3><br>
 			<div class="row">
 				<div class="col-sm-4">
 					<p>We provide you the infrastructure, </p>
@@ -209,7 +215,7 @@
 		</div>
 		
 		<footer class="container-fluid bg-4 text-center">
-		  <a href="#">Intellect Corporation. All rights reserved.</a> 
+		  <a href="#">Intellect Corporation. &#x24B8 All rights reserved.</a> 
 		</footer>
 		
 	</body>

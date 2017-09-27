@@ -9,12 +9,20 @@
 		<title>Intellect Corporation</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/validations.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+		
+		<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 		<!--<script type="text/javascript" src="js/custom.js"></script>-->
 		<style>
+		
 			.outer_div{ display: table; position: absolute; height: 100%; width: 100%;}
 			.middle_div{display: table-cell; vertical-align: middle; background:#eee;}
 			.inner_div{margin-left: auto; margin-right: auto; max-width:600px; width:100%; padding:35px}
+			 textarea.invalid, input.invalid, select.invalid, select.error, textarea.error, input.error {
+				color:#FF0000;
+}			}
 			<!-- @media only screen and (min-width: 76px) {
 			.middle_div{background:#fff;}
 			} -->
@@ -23,7 +31,32 @@
 	
 	<body>
 
-
+		<div class="outer_div" > <!-- Problem 1 -->	
+			<div class="middle_div" style="background:#abb">
+				<div class="inner_div" style="background:#2c3e50">
+					<form id="loginForm" class="Form_width">
+						<div class="page-header" style="margin-bottom: 20px;"> <h1 style="color:white">Intellect Corporations</h1> </div>
+						<div id="emailFormGroup" class="form-group">
+							<label for="emailLabel" style="color:white"><strong>Email ID</strong></label>
+							<div id="temp" class="input-group">
+							<input name="email" type="text" class="form-control" placeholder="abc" autofocus> 
+							<span name="mailLabel" class="input-group-addon">@intellect.org</span> </input>
+							</div>
+						</div>
+						<div id="passwordFormGroup" class="form-group">
+							<label for="passwordLabel" style="color:white"><strong>Password</strong></label>
+								<input name="password" type="password" class="form-control" placeholder="password"/>
+						</div>
+						<div class="form-group">
+							<button id="signIn" type="button" class="btn btn-primary">Login</button>
+							<a href="signup.html" role="button" class="btn btn-primary">Sign Up </a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#forgotPassModal">Forgot Password?</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	
 		<div class="modal fade" id="forgotPassModal" tabindex="-1" role="dialog" aria-labelledby="ForgotPassLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -44,33 +77,6 @@
 			  </div>
 			</div>
 		  </div>
-		</div>
-
-		<div class="outer_div" > <!-- Problem 1 -->	
-			<div class="middle_div" style="background:#abb">
-				<div class="inner_div" style="background:#2c3e50">
-					<form id="loginForm" class="Form_width">
-						<div class="page-header"> <h1 style="color:white">Intellect Corporations</h1> </div>
-						<div id="login_form" class="form-group">
-							<label for="emailLabel" style="color:white"><strong>Email ID</strong></label>
-							<div class="input-group">
-							<input name="email" type="email" class="form-control" placeholder="abc" autofocus></input> 
-							<span class="input-group-addon">@intellect.org</span>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="passwordLabel" style="color:white"><strong>Password</strong></label>
-							<input name="password" type="password" class="form-control" placeholder="password"/>
-						</div>
-						<br>
-						<div class="form-group">
-							<button id="signIn" type="submit" class="btn btn-primary">Login</button>
-							<a href="signup.html" role="button" class="btn btn-primary">Sign Up </a>
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#forgotPassModal">Forgot Password?</button>
-						</div>
-					</form>
-				</div>
-			</div>
 		</div>
 	
 	</body>

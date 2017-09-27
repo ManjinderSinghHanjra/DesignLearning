@@ -9,7 +9,11 @@
 		<title>Bootstrap Basic Template</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"/></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/signup.js"></script>
+		<script src="js/validations.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+		
+		<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+		<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 		<link rel="stylesheet" href="css/signup.css">
 	</head>
 	<body>
@@ -17,27 +21,27 @@
 			<div class="middle_div" style="background:#abb">
 				<div class="inner_div" style="background:#2c3e50">
 						<div class="page-header"> <h1 style="color:white">Intellect Corporations</h1> </div>
-						<form>
+						<form id="signupForm">
 							<div class="form-group">
 								<label style="color:white"><strong>Name</strong></label>
-								<input id="firstName" type="text" class="form-control" placeholder="First Name" autofocus/>
+								<input id="firstName" name="firstName" type="text" class="form-control" placeholder="First Name" autofocus/>
 								<br>
-								<input id="lastName" type="text" class="form-control" placeholder="Last Name"/>
+								<input id="lastName" name="lastName" type="text" class="form-control" placeholder="Last Name"/>
 							</div>
-							<div class="form-group">
-								<label style="color:white"><strong>EmailID</strong></label>
-								<div class="input-group">
-								<input id="email" type="text" class="form-control" placeholder="emailID"/>
-								<span class="input-group-addon">@intellect.org</span>
+							<div id="emailFormGroup" class="form-group">
+								<label for="emailLabel" style="color:white"><strong>Email ID</strong></label>
+								<div id="temp" class="input-group">
+								<input name="email" type="text" class="form-control" placeholder="abc" autofocus> 
+								<span name="mailLabel" class="input-group-addon">@intellect.org</span> </input>
 								</div>
 							</div>
 							<div class="form-group">
 								<label style="color:white"><strong>Password</strong></label>
-								<input id="password"  type="password" class="form-control" placeholder="password"/>
+								<input id="password"  name="password" type="password" class="form-control" placeholder="password"/>
 							</div>
 							<div class="form-group">
 								<label style="color:white"><strong>Confirm Password</strong></label>
-								<input id="rePassword" type="password" class="form-control" placeholder="password"/>
+								<input id="confirmPassword" name="confirmPassword" type="password" class="form-control" placeholder="password"/>
 							</div>
 							<br>
 							<div class="form-group">

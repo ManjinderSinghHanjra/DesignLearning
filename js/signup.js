@@ -1,4 +1,4 @@
-function specialCharsPresent(name, email, password)
+/*function specialCharsPresent(name, email, password)
 {
 	alert("hello");
 	var regex = new RegExp("^[a-zA-Z]+$");
@@ -48,4 +48,4 @@ $(document).ready( function(){
 			alert("Sign-up Successful! Redirecting you to the login page...");
 		}
 	});
-});
+});*/

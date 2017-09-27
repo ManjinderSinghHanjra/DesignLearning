@@ -10,7 +10,17 @@ $(document).ready( function(){
 		return /^[A-Za-z0-9\d]+$/.test(value);
 	}, 'No special characters are allowed except @(at) .(dot) and _(underscore)');
 	
-
+	$("#signIn").on('click', function() {
+			if($("#loginForm").valid())
+			{
+				var email = $("#email").val();
+				var pass  = $("#password").val();
+				if(email==='admin' && pass==='admin')
+				{
+					window.location.href="home.html";
+				}
+			}
+	});
 
 	$("#loginForm").validate({
 				rules: {
@@ -116,4 +126,5 @@ $(document).ready( function(){
 								}
 				}
 		});
+		
 });

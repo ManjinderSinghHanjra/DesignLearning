@@ -42,6 +42,7 @@ $(document).ready( function(){
 				},
 				
 				errorPlacement: function(error, element) {
+					error.className = 'error'; 		//for styling
 					 if (element.attr("name") == "email") {
 						var br = document.createElement("br");
 						error.appendTo( document.getElementById("emailFormGroup") );

@@ -8,11 +8,15 @@
 		<title>Intellect Corporation</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/validations.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
 		<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
 		<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		
+		<script src="js/validations.js"></script>
+		<script src="js/login.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 		<link rel="stylesheet" href="css/validations.css"/>
 		<style>
 			.outer_div{ display: table; position: absolute; height: 100%; width: 100%;}
@@ -42,7 +46,7 @@
 						<div id="failure" style="display:none">
 							email and/or password is wrong! Try again.
 						</div>
-						<div class="form-group">
+						<div class="btn-group btn-group-justified">
 								<button id="signIn" type="button" class="btn btn-primary" style="margin:4px">Login</button>
 								<a href="signup.html" ><button type="button" class="btn btn-primary" style="margin:4px">Sign Up</button></a>
 								<button type="button" class="btn btn-primary" style="margin:4px" data-toggle="modal" data-target="#forgotPassModal">Forgot Password?</button>
@@ -62,18 +66,25 @@
 				  <span aria-hidden="true">&times;</span>
 				</button>
 			  </div>
-			  <div class="modal-body">
-				<div class="form">
+			  <div id="forgotModalBody" class="modal-body">
+				<div class="form forgotEmail" id="#forgotEmail">
 					<input type="text" style="width:100%" placeholder="Enter registered email or phone"/>
 				</div>
 			  </div>
 			  <div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Continue</button>
+				<button id="forgotContinue" type="button" class="btn btn-primary" data-dismiss="modal">Continue</button>
 			  </div>
 			</div>
+			<div id="continueDialog" title="Details sent.">
+			<p>
+				Password resetting details have been sent to your email/device.
+			</p>
+		</div>
 		  </div>
 		</div>
+		
+		
 	
 	</body>
 	

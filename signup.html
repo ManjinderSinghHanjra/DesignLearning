@@ -8,11 +8,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>Intellect Corporation</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"/></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/validations.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
 		<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
-		<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/validations.js"></script>
+		<link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="css/signup.css">
 		<link rel="stylesheet" href="css/validations.css">
 	</head>
@@ -27,6 +28,10 @@
 								<input id="firstName" name="firstName" type="text" class="form-control" placeholder="First Name" autofocus/>
 								<br>
 								<input id="lastName" name="lastName" type="text" class="form-control" placeholder="Last Name"/>
+							</div>
+							<div class="form-group">
+								<label style="color:white"><strong>Date of birth</strong></label>
+								<input id="dob" name="dob" type="text" class="form-control" title="Select your dob" data-toggle="popover" data-placement="right" data-content="" placeholder="1/1/1000"/>
 							</div>
 							<div id="emailFormGroup" class="form-group">
 								<label for="emailLabel" style="color:white"><strong>Email ID</strong></label>

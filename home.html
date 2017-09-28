@@ -6,19 +6,75 @@
 		<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> --> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>Intellect Corporation</title>
-		
-		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link rel="stylesheet" href="css/home.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script>
+		/*$(document).ready(function(){
+		console.log("ddd");
 			$("#header").load("header.html");
+		});*/
 		</script>
 	</head>
 	<body>
-		<div id="header"></div>
+	
+	<nav class="navbar navbar-inverse" style="margin-bottom:0px">		  
+		  <div class="container" 
+				style="margin-left: 0px;
+					   margin-right: 0px;
+					   padding-left: 0px;
+					   padding-right: 0px;
+					   left: 9px;
+					   bottom: 0px;
+					   margin-top: 0px;
+					   right: 0px;">
+			
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">Intellect Corportations</a>
+			</div>
+		
+			<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			  <ul class="nav navbar-nav navbar-right" style="display:inline">
+				<li><a href="#">Home</a></li>
+				<li><a href="#nav-collapse-OSSTools" class="dropdown-toggle" data-toggle="dropdown">OSS Tools</a></li>
+				<!--<li><a href="#nav-collapse-OSSTools" data-toggle="collapse" aria-expanded="false" aria-controls="nav-collapse-OSSTools">OSS Tools</a></li>-->
+				<li><a href="#">Community</a></li>
+				<li><a href="#nav-collapse-Research" class="dropdown-toggle" data-toggle="dropdown">Research Section</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="#">About</a></li>	
+				<li>
+					<form class="form-inline" style="padding-top:5px">
+						<div class="form-group has-feedback">
+							<input type="text" class="form-control" placeholder="search" />
+							<i class="glyphicon glyphicon-search form-control-feedback"></i>
+						</div>
+					</form>
+				</li>
+			  </ul>
+			  <ul class="collapse nav navbar-nav nav-collapse" id="nav-collapse-OSSTools">
+				<li><a href="#">Protein Synthesis Analyzer</a></li>
+				<li><a href="#">Quantum Entanglement Simulator</a></li>
+				<li><a href="#">Quantum Gravity Simulator</a></li>
+				<li><a href="#">Anti-particle Attraction Simultor</a></li>
+			  </ul>
+			  <ul class="collapse nav navbar-nav nav-collapse" id="nav-collapse-Research">
+				<li><a href"#">Quantum Physics</a></li>
+				<li><a href"#">Bio-Informatics</a></li>
+				<li><a href"#">Quantum Physics</a></li>
+			  </ul>
+			</div>
+			
+		 </div>
+		</nav>
+	
 		<div id="scienceCarousel" class="carousel slide container-fluid" data-ride="carousel" data-interval="4000" style="padding-left: 0px; padding-right: 0px;">
 		  <ol class="carousel-indicators">
 			<li  data-slide-to="0" class="active" data-target="#scienceCarousel" data-slide-to="0"></li>

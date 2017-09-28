@@ -10,6 +10,7 @@ $(document).ready( function(){
 		function(value, element){ return /^[A-Za-z0-9\d]+$/.test(value); }, "No special characters are allowed except @(at) .(dot) and _(underscore)");
 	
 	$("#signIn").on('click', function() {
+		
 			if($("#loginForm").valid())
 			{
 				var email = $("#email").val();
@@ -21,10 +22,37 @@ $(document).ready( function(){
 				}
 				else
 				{
-					$("#failure").css({'display':'inline', 'color':#ff0000'});
+					$("#failure").css({'display':'inline', 'color':'#ff0000'});
 				}
 			}
 	});
+	
+	
+	$("#dob").datepicker({
+		onSelect: function() {
+			$(this).data('datepicker').inline = true;                               
+		},
+		onClose: function() {
+			$(this).data('datepicker').inline = false;
+		},
+		changeMonth:true, changeYear:true});
+	
+	$("#signup").on('click', function() {
+		
+			if($("#signupForm").valid())
+			{
+				alert("Signup successful");
+			}
+				else
+				{
+					alert("Can't proceed.");
+				}
+	});
+	
+	
+	
+	
+	$("#scienceCarousel").hover( function(){ $(this).carousel('pause') } );
 
 	$("#loginForm").validate({
 				rules: {

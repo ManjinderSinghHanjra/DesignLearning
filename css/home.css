@@ -1,6 +1,7 @@
 .carousel-caption {
+	       color: #444444;
+	       position: relative;
 				  margin: 100px auto;
-				  position: relative;
 				  left: auto;
 				  right: auto;
 				  bottom: 30%;

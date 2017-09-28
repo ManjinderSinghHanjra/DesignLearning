@@ -1,14 +1,13 @@
-
-
 $(document).ready( function(){
 	
-	jQuery.validator.addMethod("customEmailValidator", function(value, element) {
-		return /^[a-zA-Z]+$/.test(value);
-	}, 'Only alphabets are allowed');
-
-	jQuery.validator.addMethod("customPasswordValidator", function(value, element) {
-		return /^[A-Za-z0-9\d]+$/.test(value);
-	}, 'No special characters are allowed except @(at) .(dot) and _(underscore)');
+	jQuery.validator.addMethod("customNameValidator", 
+		function(value, element){ return /^[]+$/.test(value); }, "Only alphabets are allowed.");
+	
+	jQuery.validator.addMethod("customEmailValidator", 
+		function(value, element){ return /^[a-zA-Z0-9\d\@._]+$/.test(value); }, 'No special characters are allowed except @(at) .(dot) and _(underscore)');
+	
+	jQuery.validator.addMethod("customPasswordValidator", 
+		function(value, element){ return /^[A-Za-z0-9\d]+$/.test(value); }, "No special characters are allowed except @(at) .(dot) and _(underscore)");
 	
 	$("#signIn").on('click', function() {
 			if($("#loginForm").valid())
@@ -17,7 +16,12 @@ $(document).ready( function(){
 				var pass  = $("#password").val();
 				if(email==='admin' && pass==='admin')
 				{
+					$("#failure").css("display", "none");
 					window.location.href="home.html";
+				}
+				else
+				{
+					$("#failure").css({'display':'inline', 'color':#ff0000'});
 				}
 			}
 	});
@@ -68,12 +72,12 @@ $(document).ready( function(){
 									required: true,
 									minlength: 3,
 									maxlength: 32,
-									customEmailValidator: true
+									customNameValidator: true
 						},
 						lastName: {
 									minlength: 3,
 									maxlength: 32,
-									customEmailValidator: true
+									customNameValidator: true
 						},
 						email: {
 									required: true,

@@ -43,7 +43,6 @@
 				margin: 10px;
 				text-indent: 0;
 				cursor: pointer;
-				border: none;
 				background-color: #5b1d0a;
 			}
 			
@@ -54,4 +53,8 @@
 			
 .panel:hover{
 	box-shadow:10px 0px 40px #000000;
+}
+
+.Blog-Post-Color{
+	color:#000000;
 }

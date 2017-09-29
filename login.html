@@ -21,7 +21,11 @@
 		<style>
 			.outer_div{ display: table; position: absolute; height: 100%; width: 100%;}
 			.middle_div{display: table-cell; vertical-align: middle; background:#eee;}
-			.inner_div{margin-left: auto; margin-right: auto; max-width:600px; width:100%; padding:35px}
+			.inner_div{margin-left: auto; margin-right: auto; max-width:600px; width:100%; padding:35px;
+						box-shadow: 20px 0px 40px 0px #000000; }
+						
+			.ConfirmationBox{ color:#101010; display:inline-block; text-align:center; background-color:#fff; position:absolute; z-index:-10;
+			}
 		</style>
 	</head>
 	
@@ -30,6 +34,8 @@
 		<div class="outer_div" > <!-- Problem 1 -->	
 			<div class="middle_div" style="background:#abb">
 				<div class="inner_div" style="background:#2c3e50">
+				
+					<div class="EnitreForm">
 					<form id="loginForm" class="Form_width">
 						<div class="page-header" style="margin-bottom: 20px;"> <h1 style="color:white">Intellect Corporations</h1> </div>
 						<div id="emailFormGroup" class="form-group">
@@ -39,6 +45,12 @@
 							<span name="mailLabel" class="input-group-addon">@intellect.org</span> </input>
 							</div>
 						</div>
+						
+						<div class="jumbotron ConfirmationBox" style="padding-bottom:5px !important; padding-top:5px; left:auto !important">
+						<p>A message is sent onto your mobile/email regarding password resetting.</p>
+						<button class="btn btn-success ConfirmationButton" style=" float:right;">OK</button>
+						</div>
+					
 						<div id="passwordFormGroup" class="form-group">
 							<label for="passwordLabel" style="color:white"><strong>Password</strong></label>
 								<input name="password" id="password" type="password" class="form-control" placeholder="password"/>
@@ -53,6 +65,7 @@
 							</div>
 						</div>
 					</form>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -73,18 +86,11 @@
 			  </div>
 			  <div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button id="forgotContinue" type="button" class="btn btn-primary" data-dismiss="modal">Continue</button>
+				<button id="ContinueButton" type="button" class="btn btn-primary" data-dismiss="modal">Continue</button>
 			  </div>
 			</div>
-			<div id="continueDialog" title="Details sent.">
-			<p>
-				Password resetting details have been sent to your email/device.
-			</p>
-		</div>
 		  </div>
 		</div>
-		
-		
 	
 	</body>
 	

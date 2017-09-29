@@ -29,20 +29,9 @@ $(document).ready( function(){
 	
 	$("#signup").on('click', function() {
 		
-			if($("#signupForm").valid())
-			{
-				alert("Signup successful");
-			}
-				else
-				{
-					alert("Can't proceed.");
-				}
+			$("#signupForm").valid();
 	});
 	
-	
-	
-	
-	$("#scienceCarousel").hover( function(){ $(this).carousel('pause') } );
 
 	$("#loginForm").validate({
 				rules: {

@@ -1,11 +1,13 @@
 $(document).ready(function(){
-	$("#forgotContinue").click( function() {
-	$("#continueDialog").dialog({
-		
-		modal: true,
-		buttons: {
-			ok: function() {$(this).dialog("close");}
-		}
+	
+	$(".ConfirmationButton").click(function(){ 
+			$(".ConfirmationBox").css("z-index", "-10");
+			$(".EntireForm").css("opacity","1.0");
 	});
+	
+	$("#ContinueButton").click(function(){
+		$(".ConfirmationBox").css("z-index", "10");
+		$(".EntireForm").css("opacity", "0.3");
 	});
+	
 });

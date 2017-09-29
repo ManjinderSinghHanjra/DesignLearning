@@ -1,7 +1,7 @@
 $(document).ready( function(){
 	
 	jQuery.validator.addMethod("customNameValidator", 
-		function(value, element){ return /^[]+$/.test(value); }, "Only alphabets are allowed.");
+		function(value, element){ return /^[a-zA-Z]+$/.test(value); }, "Only alphabets are allowed.");
 	
 	jQuery.validator.addMethod("customEmailValidator", 
 		function(value, element){ return /^[a-zA-Z0-9\d\@._]+$/.test(value); }, 'No special characters are allowed except @(at) .(dot) and _(underscore)');

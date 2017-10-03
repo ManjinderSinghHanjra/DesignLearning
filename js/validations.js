@@ -9,6 +9,12 @@ $(document).ready( function(){
 	jQuery.validator.addMethod("customPasswordValidator", 
 		function(value, element){ return /^[A-Za-z0-9\d]+$/.test(value); }, "No special characters are allowed except @(at) .(dot) and _(underscore)");
 	
+	$("#ContinueButton").on('click', function() {
+			var remodal = $('[data-remodal-id=modal]').remodal();
+			remodal.open();
+	});
+	
+	
 	$("#signIn").on('click', function() {
 		
 			if($("#loginForm").valid())

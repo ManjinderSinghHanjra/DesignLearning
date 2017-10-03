@@ -16,7 +16,10 @@
 		<script src="js/validations.js"></script>
 		<script src="js/login.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="css/remodal.css">
+		<link rel="stylesheet" href="css/remodal-default-theme.css">
+		<script src="js/remodal.js"></script>
+		<!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
 		<link rel="stylesheet" href="css/validations.css"/>
 		<style>
 			.popupBox {
@@ -78,17 +81,6 @@
 							<span name="mailLabel" class="input-group-addon">@intellect.org</span> </input>
 							</div>
 						</div>
-						
-						<!--<div id="overLay"></div>
-							<div class="popupBox" id="xPopup"></div>
-							<div class="popupBox" id="yPopup"></div>
-							<a href="#" class="listAttractions" id="x">Link 1</a>
-						</div>-->
-						<!--<div class="jumbotron ConfirmationBox" style="padding-bottom:5px !important; padding-top:5px; left:auto !important">
-						<p>A message has been sent to your mobile/email regarding password resetting.</p>
-						<button class="btn btn-success ConfirmationButton" style=" float:right;">OK</button>
-						</div>-->
-					
 						<div id="passwordFormGroup" class="form-group">
 							<label for="passwordLabel" style="color:white"><strong>Password</strong></label>
 								<input name="password" id="password" type="password" class="form-control" placeholder="password"/>
@@ -128,6 +120,17 @@
 			  </div>
 			</div>
 		  </div>
+		</div>
+		
+		<div class="remodal-bg">
+			<div class="remodal" data-remodal-id="modal">
+				<button data-remodal-action="close" class="remodal-close"></button>
+				<h1>Message Sent!</h1>
+					<p>Information regarding password reset has been sent to your email-id/phone number.</p>
+					<br>
+					<button class="remodal-cancel" data-remodal-action="cancel">Cancel</button>
+					<button class="remodal-confirm" data-remodal-action="confirm">OK</button>
+			</div>
 		</div>
 	
 	</body>
